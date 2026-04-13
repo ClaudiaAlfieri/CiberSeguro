@@ -1,0 +1,82 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: #f4f7fb;
+	color: #1d2630;
+}
+
+nav ul {
+	margin: 0;
+	padding: 1rem;
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	background: #0f172a;
+}
+
+nav a {
+	color: #e2e8f0;
+	text-decoration: none;
+}
+
+header,
+section {
+	width: min(960px, 92%);
+	margin: 2rem auto;
+}
+
+.ameacas-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+}
+
+.ameaca-card {
+	background: #ffffff;
+	border-radius: 12px;
+	padding: 1rem;
+	cursor: pointer;
+	border: 1px solid #dbe3ec;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ameaca-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+}
+
+.modal {
+	position: fixed;
+	inset: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background: rgba(2, 6, 23, 0.55);
+	padding: 1rem;
+}
+
+.modal.open {
+	display: flex;
+}
+
+.modal-content {
+	position: relative;
+	width: min(560px, 100%);
+	background: #ffffff;
+	border-radius: 14px;
+	padding: 1.25rem;
+}
+
+.modal-close {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.75rem;
+	border: 0;
+	background: transparent;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
