@@ -5,8 +5,8 @@
 body {
 	margin: 0;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	background: #f4f7fb;
-	color: #1d2630;
+	color: #f4f7fb;
+	background: #073263;
 }
 
 nav ul {
@@ -19,7 +19,7 @@ nav ul {
 }
 
 nav a {
-	color: #e2e8f0;
+	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -31,22 +31,38 @@ section {
 
 .ameacas-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-	gap: 1rem;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem;
 }
 
 .ameaca-card {
-	background: #ffffff;
-	border-radius: 12px;
-	padding: 1rem;
+	background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+	border-radius: 18px;
+	padding: 1.5rem;
 	cursor: pointer;
-	border: 1px solid #dbe3ec;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	border: 1px solid #c9d8ea;
+	box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+	min-height: 180px;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+	color: #073263;
 }
 
 .ameaca-card:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+	transform: translateY(-5px);
+	box-shadow: 0 18px 36px rgba(15, 23, 42, 0.18);
+	border-color: #8fb0d4;
+}
+
+.ameaca-card h3 {
+	margin-top: 0;
+	margin-bottom: 0.75rem;
+	font-size: 1.35rem;
+}
+
+.ameaca-card p {
+	margin: 0;
+	line-height: 1.6;
+	font-size: 1.03rem;
 }
 
 .modal {
@@ -55,7 +71,7 @@ section {
 	display: none;
 	align-items: center;
 	justify-content: center;
-	background: rgba(2, 6, 23, 0.55);
+	background: rgba(1, 6, 26, 0.90);
 	padding: 1rem;
 }
 
@@ -67,8 +83,10 @@ section {
 	position: relative;
 	width: min(560px, 100%);
 	background: #ffffff;
+	color: #073263;
 	border-radius: 14px;
-	padding: 1.25rem;
+	padding: 2rem;
+	font-size: 1.5rem;
 }
 
 .modal-close {
@@ -79,4 +97,14 @@ section {
 	background: transparent;
 	font-size: 1.5rem;
 	cursor: pointer;
+}
+
+@media (max-width: 720px) {
+	.ameacas-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ameaca-card {
+		min-height: auto;
+	}
 }
