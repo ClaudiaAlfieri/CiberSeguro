@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CiberSeguro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
@@ -22,26 +23,35 @@
 
     <section>
         <h2>Tipos de ameaças</h2>
-        <div>
-            <div>
+        <div class="ameacas-grid">
+            <div class="ameaca-card" data-modal-title="Phishing" data-modal-text="O phishing é um dos ataques mais comuns na internet. O atacante envia um email que parece ser do teu banco, da CTT ou até da Netflix, pedindo que cliques num link e introduzas os teus dados. O site parece real, mas é uma cópia falsa. Dica: verifica sempre o endereço de email do remetente e nunca cliques em links suspeitos.">
                 <h3>Phishing</h3>
                 <p>Emails ou mensagens falsas que imitam empresas reais para roubar os teus dados.</p>
             </div>
-             <div>
+             <div class="ameaca-card" data-modal-title="Passwords fracas" data-modal-text="Uma password fraca é uma das portas de entrada mais fáceis para um atacante. Evita datas de nascimento, nomes próprios ou sequências simples. Uma boa password tem pelo menos 12 caracteres, combina letras maiúsculas e minúsculas, números e símbolos. Considera usar um gestor de passwords.">
                 <h3>Passwords fracas</h3>
                 <p>Usar '123456' ou o teu nome como password é um convite para os hackers.</p>
             </div>
-            <div>
+            <div class="ameaca-card" data-modal-title="Malware" data-modal-text="O malware inclui vírus, ransomware e spyware. Pode chegar através de ficheiros descarregados, anexos de email ou sites não seguros. Uma vez instalado, pode roubar dados, bloquear o teu computador ou espiar a tua atividade. Mantém o teu sistema operativo e antivírus sempre atualizados.">
                 <h3>Malware</h3>
                 <p>Programas maliciosos que se instalam no teu dispositivo sem o teu conhecimento.</p>
             </div>
-            <div>
+            <div class="ameaca-card" data-modal-title="Wi-Fi público" data-modal-text="Numa rede Wi-Fi pública, como num café ou aeroporto, qualquer pessoa na mesma rede pode tentar intercetar o teu tráfego. Evita aceder ao teu banco ou introduzir passwords nestas redes. Se precisares mesmo de as usar, considera ligar uma VPN para proteger a tua ligação.">
                 <h3>Wi-Fi público</h3>
                 <p>Ligar-te a redes abertas pode expor os teus dados a desconhecidos na mesma rede.</p>
             </div>            
         </div>
     </section>
 
+    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close" type="button" aria-label="Fechar modal">x</button>
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
