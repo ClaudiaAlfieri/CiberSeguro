@@ -9,19 +9,21 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#ameacas-section">Tipos de Ameaças</a></li>
+            <li><a href="#quiz-section">Quiz</a></li>
+            <li><a href="#">Checklist</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
-    <header>
+    <header class="hero" id="hero">
+        <img src="/imagens/header.webp" alt="Pessoa a usar um computador com um cadeado digital a simbolizar segurança online">
         <h1>Bem vindo ao CiberSeguro</h1>
-        <p>"Segurança digital para quem vive online."</p>
-        <h2>Por Cláudia Alfieri</h2>
+        <p class="slogan">"Segurança digital para quem vive online."</p>
+        <h2 class="nome">Por Cláudia Alfieri</h2>
     </header>
 
-    <section>
+    <section class="ameacas-section" id="ameacas-section">
         <h2>Tipos de ameaças</h2>
         <div class="ameacas-grid">
             <div class="ameaca-card" data-modal-title="Phishing" data-modal-text="O phishing é um dos ataques mais comuns na internet. O atacante envia um email que parece ser do teu banco, da CTT ou até da Netflix, pedindo que cliques num link e introduzas os teus dados. O site parece real, mas é uma cópia falsa. Dica: verifica sempre o endereço de email do remetente e nunca cliques em links suspeitos.">
@@ -51,7 +53,15 @@
         </div>
     </div>
 
+    <section class="quiz-section" id="quiz-section">
+        <h2>Quiz</h2>
+        <p>Testa os teus conhecimentos sobre segurança digital!</p>
+    </section>
+
     <script src="script.js"></script>
 
+    <footer>
+        <p>&copy; 2026 CiberSeguro por Cláudia Alfieri. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
