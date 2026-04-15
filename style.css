@@ -42,6 +42,12 @@ nav a {
 }
 
 /* --- Header --- */
+
+header, section {
+    min-height: 100vh;
+    scroll-margin-top: 120px; 
+}
+
 header {
     width: 100%; 
     margin: 0 auto;
@@ -81,15 +87,15 @@ h1 {
 }
 
 /* --- Conteúdo --- */
-section {
-    width: min(1800px, 99%);
-    margin: 10rem auto; 
-}
-
 h2 {
     font-size: 2.5rem;
     text-align: center;
     margin: 4rem 0 2rem;
+}
+
+.ameacas-section {
+    width: min(1000px, 90%);
+    margin: 0 auto;
 }
 
 .ameacas-grid {
@@ -100,13 +106,26 @@ h2 {
 
 .ameaca-card {
     background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
-    border-radius: 14px;
-    padding: 1.5rem;
+    border-radius: 18px;
+    padding: 1.2rem; 
     cursor: pointer;
     border: 1px solid #c9d8ea;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);  
+    min-height: 120px;     
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     color: #073263;
+}
+
+.ameaca-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem; 
+}
+
+.ameaca-card p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 0.95rem;
 }
 
 .ameaca-card:hover {
@@ -140,9 +159,9 @@ h2 {
 /* --- Footer --- */
 footer {
     background: #0f172a;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 /* --- Responsividade --- */
