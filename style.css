@@ -46,7 +46,8 @@ header, section {
 }
 
 header {
-	width: min(1800px, 99%);
+	width: 100%;
+    height: auto;
 	margin: 1rem auto 2rem;
 }
 
@@ -63,7 +64,7 @@ section {
 
 header img {
 	width: 100%;
-	height: clamp(340px, 105vw, 780px);
+	height: 65vh;
 	object-fit: cover;
 	border-radius: 14px;
 	margin-bottom: 2rem;
@@ -73,19 +74,18 @@ header img {
 h1 {
 	font-size: 5.5rem;
 	text-align: center;
-	margin: 6rem 0 2.5rem;
-    padding: 2rem;
+	margin: 4rem 0 2.5rem;
 }
 .slogan{
 	font-size: 3rem;
 	text-align: center;
-	margin: 3.5rem 0 3rem;
+	margin: 3rem 0 3rem;
 }
 
 .nome {
 	font-size: 3.5rem;
 	text-align: right;
-	margin: 1.5rem 0 3rem;
+	margin: 1rem 0 3rem;
 }
 
 h2{
