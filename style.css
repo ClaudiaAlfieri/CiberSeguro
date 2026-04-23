@@ -7,7 +7,7 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #f4f7fb;
     background: #073263;
-    line-height: 1.6; 
+    line-height: 1.6;
 }
 
 html {
@@ -15,7 +15,8 @@ html {
     overflow-y: scroll;
 }
 
-/* --- Navegação --- */
+/* ==================== NAVEGAÇÃO ==================== */
+
 nav {
     position: fixed;
     top: 0;
@@ -41,57 +42,57 @@ nav a {
     text-decoration: none;
 }
 
-/* --- Header --- */
+nav a:hover {
+    color: #4ade80;
+}
+
+/* ==================== HEADER ==================== */
 
 header, section {
     min-height: 100vh;
-    scroll-margin-top: 120px; 
+    scroll-margin-top: 60px;
 }
 
 header {
-    width: 100%; 
-    margin: 0 auto;
-    scroll-margin-top: 80px;
-    padding-top: 50px;
+    padding-top: 60px;
     text-align: center;
 }
 
 header img {
     width: 100%;
-    height: 65vh; 
-    max-height: 500px; 
+    height: 60vh;
+    max-height: 500px;
     object-fit: cover;
-    border-radius: 14px;
     display: block;
 }
 
 h1 {
-    font-size: 3rem; 
+    font-size: 3rem;
     margin: 2rem 0 1rem;
 }
 
 .slogan {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     margin: 0 0 1rem;
     color: #cbd5e1;
 }
 
 .nome {
-   font-size: 1.2rem;
+    font-size: 1.2rem;
     text-align: right;
-    display: block;
-    margin-top: 0.5rem;    
-    max-width: 800px;    
-    margin-left: auto;  
-    margin-right: auto;
+    max-width: 800px;
+    margin: 0.5rem auto 0;
 }
 
-/* --- Conteúdo --- */
+/* ==================== TÍTULOS DE SECÇÃO ==================== */
+
 h2 {
     font-size: 2.5rem;
     text-align: center;
     margin: 4rem 0 3rem;
 }
+
+/* ==================== AMEAÇAS ==================== */
 
 .ameacas-section {
     width: min(1000px, 90%);
@@ -105,34 +106,32 @@ h2 {
 }
 
 .ameaca-card {
-    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    background: #ffffff;
     border-radius: 18px;
-    padding: 2rem; 
+    padding: 2rem;
     cursor: pointer;
     border: 1px solid #c9d8ea;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);  
-    min-height: 120px;     
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     color: #073263;
-}
-
-.ameaca-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem; 
-}
-
-.ameaca-card p {
-    margin: 0;
-    line-height: 1.4;
-    font-size: 0.95rem;
+    transition: transform 0.2s ease;
 }
 
 .ameaca-card:hover {
     transform: translateY(-5px);
 }
 
-/* --- Modal --- */
+.ameaca-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.ameaca-card p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ==================== MODAL ==================== */
+
 .modal {
     position: fixed;
     inset: 0;
@@ -154,23 +153,533 @@ h2 {
     color: #073263;
     border-radius: 14px;
     padding: 2.5rem;
-    font-size: 1.2rem;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    font-size: 1.1rem;
 }
 
-/* --- Footer --- */
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #073263;
+}
+
+/* ==================== QUIZ ==================== */
+
+.quiz-section {
+    width: min(700px, 90%);
+    margin: 0 auto;
+}
+
+.quiz-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+}
+
+.quiz-container {
+    background: #0f172a;
+    border-radius: 18px;
+    padding: 2.5rem;
+    border: 1px solid #1e3a5f;
+}
+
+.quiz-pergunta {
+    display: none;
+    text-align: center;
+}
+
+#pergunta-1 {
+    display: block;
+}
+
+.quiz-pergunta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-quiz {
+    background: #1e3a5f;
+    color: #f4f7fb;
+    border: 1px solid #2d5a8e;
+    border-radius: 10px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: background 0.2s ease;
+}
+
+.btn-quiz:hover {
+    background: #2d5a8e;
+}
+
+.quiz-resultado {
+    display: none;
+    text-align: center;
+}
+
+.quiz-resultado p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-reiniciar {
+    background: #073263;
+    color: #f4f7fb;
+    border: 1px solid #2d5a8e;
+    border-radius: 10px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-reiniciar:hover {
+    background: #2d5a8e;
+}
+
+/* ==================== DICAS ==================== */
+
+.dicas-section {
+    width: min(700px, 90%);
+    margin: 0 auto;
+}
+
+.dicas-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+}
+
+.dicas-container {
+    background: #0f172a;
+    border-radius: 18px;
+    border: 1px solid #1e3a5f;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    flex: 1;
+    padding: 1rem;
+    background: #1e3a5f;
+    color: #cbd5e1;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.tab:hover {
+    background: #2d5a8e;
+}
+
+.tab.ativa {
+    background: #0f172a;
+    color: #f4f7fb;
+    font-weight: bold;
+    border-bottom: 3px solid #4ade80;
+}
+
+.tab-conteudo {
+    padding: 1.5rem 2rem;
+}
+
+.dicas-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dicas-lista li {
+    padding: 0.8rem 1rem;
+    background: #1e3a5f;
+    border-radius: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: background 0.2s ease;
+}
+
+.dicas-lista li:hover {
+    background: #2d5a8e;
+}
+
+/* ==================== CHECKLIST ==================== */
+
+.checklist-section {
+    width: min(700px, 90%);
+    margin: 0 auto;
+}
+
+.checklist-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+}
+
+.checklist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.progresso-container {
+    background: #0f172a;
+    border-radius: 14px;
+    padding: 1.5rem 2rem;
+    border: 1px solid #1e3a5f;
+}
+
+#progresso-texto {
+    text-align: center;
+    margin: 0 0 0.7rem 0;
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+.barra-fundo {
+    background: #1e3a5f;
+    border-radius: 10px;
+    height: 14px;
+    overflow: hidden;
+}
+
+.barra-progresso {
+    background: #4ade80;
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+.acordeao-item {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #1e3a5f;
+}
+
+.acordeao-cabecalho {
+    width: 100%;
+    background: #0f172a;
+    color: #f4f7fb;
+    border: none;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.acordeao-cabecalho:hover {
+    background: #1e3a5f;
+}
+
+.seta {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.acordeao-conteudo {
+    max-height: 0;
+    overflow: hidden;
+    background: #ffffff;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1.5rem;
+}
+
+.acordeao-conteudo.aberto {
+    max-height: 400px;
+    padding: 1rem 1.5rem;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist-item {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    color: #0f172a;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.checklist-item:last-child {
+    border-bottom: none;
+}
+
+.checklist-item label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+.checklist-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #4ade80;
+    flex-shrink: 0;
+}
+
+.checklist-mensagem {
+    display: none;
+    text-align: center;
+    padding: 1rem;
+    background: #14532d;
+    color: #4ade80;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    border: 1px solid #4ade80;
+}
+
+/* ==================== CONTACTO ==================== */
+
+.contacto-section {
+    width: min(700px, 90%);
+    margin: 0 auto;
+}
+
+.contacto-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+}
+
+.contacto-container {
+    background: #0f172a;
+    border-radius: 18px;
+    padding: 2.5rem;
+    border: 1px solid #1e3a5f;
+    margin-bottom: 4rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.campo label {
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #2d5a8e;
+    background: #1e3a5f;
+    color: #f4f7fb;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #4ade80;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.campo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.campo-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #4ade80;
+    flex-shrink: 0;
+}
+
+.btn-formulario {
+    width: 100%;
+    padding: 1rem;
+    background: #4ade80;
+    color: #0f172a;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-formulario:hover {
+    background: #22c55e;
+}
+
+.sucesso-icone {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#sucesso-mensagem {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.sucesso-sub {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+}
+
+/* ==================== FOOTER ==================== */
+
 footer {
     background: #0f172a;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
-    margin-top: 2rem;
 }
 
-/* --- Responsividade --- */
-@media (max-width: 720px) {
+/* ==================== RESPONSIVIDADE ==================== */
+
+/* Tablet (até 900px) */
+@media (max-width: 900px) {
+    nav ul {
+        gap: 1.2rem;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .ameacas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Telemóvel (até 650px) */
+@media (max-width: 650px) {
+    nav ul {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        padding: 0.7rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        margin: 2rem 0 1.5rem;
+    }
+
+    .slogan {
+        font-size: 1.1rem;
+    }
+
+    header img {
+        height: 40vh;
+    }
+
     .ameacas-grid {
         grid-template-columns: 1fr;
     }
-    h1 { font-size: 2.2rem; }
-    header img { height: 40vh; }
+
+    .ameaca-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .quiz-container {
+        padding: 1.5rem;
+    }
+
+    .btn-quiz {
+        padding: 0.6rem 1.2rem;
+        margin: 0.3rem;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        border-bottom: 1px solid #0f172a;
+    }
+
+    .tab.ativa {
+        border-bottom: 3px solid #4ade80;
+    }
+
+    .tab-conteudo {
+        padding: 1rem;
+    }
+
+    .acordeao-cabecalho {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .contacto-container {
+        padding: 1.5rem;
+    }
+
+    .nome {
+        text-align: center;
+    }
+}
+
+/* Telemóvel pequeno (até 400px) */
+@media (max-width: 400px) {
+    nav ul {
+        font-size: 0.75rem;
+        gap: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-quiz {
+        display: block;
+        width: 80%;
+        margin: 0.4rem auto;
+    }
 }
