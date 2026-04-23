@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,61 +7,334 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="#hero">Home</a></li>
-            <li><a href="#ameacas-section">Tipos de Ameaças</a></li>
+            <li><a href="#ameacas-section">Ameaças</a></li>
             <li><a href="#quiz-section">Quiz</a></li>
-            <li><a href="#">Checklist</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#dicas-section">Dicas</a></li>
+            <li><a href="#checklist-section">Checklist</a></li>
+            <li><a href="#contacto-section">Contacto</a></li>
         </ul>
     </nav>
+
     <header class="hero" id="hero">
-        <img src="/imagens/header.webp" alt="Pessoa a usar um computador com um cadeado digital a simbolizar segurança online">
-        <h1>Bem vindo ao CiberSeguro</h1>
+        <img src="imagens/header.webp" alt="Pessoa a usar um computador com um cadeado digital a simbolizar segurança online">
+        <h1>Bem-vindo ao CiberSeguro</h1>
         <p class="slogan">"Segurança digital para quem vive online."</p>
-        <h2 class="nome">Por Cláudia Alfieri</h2>
+        <p class="nome">Por Cláudia Alfieri</p>
     </header>
 
+    <!-- SECÇÃO: AMEAÇAS -->
     <section class="ameacas-section" id="ameacas-section">
-        <h2>Tipos de ameaças</h2>
+        <h2>Tipos de Ameaças</h2>
         <div class="ameacas-grid">
-            <div class="ameaca-card" data-modal-title="Phishing" data-modal-text="O phishing é um dos ataques mais comuns na internet. O atacante envia um email que parece ser do teu banco, da CTT ou até da Netflix, pedindo que cliques num link e introduzas os teus dados. O site parece real, mas é uma cópia falsa. Dica: verifica sempre o endereço de email do remetente e nunca cliques em links suspeitos.">
-                <h3> 📧 Phishing</h3>
+
+            <div class="ameaca-card"
+                data-modal-title="Phishing"
+                data-modal-text="O phishing é um dos ataques mais comuns na internet. O atacante envia um email que parece ser do teu banco, da CTT ou até da Netflix, pedindo que cliques num link e introduzas os teus dados. O site parece real, mas é uma cópia falsa. Dica: verifica sempre o endereço de email do remetente e nunca cliques em links suspeitos.">
+                <h3>📧 Phishing</h3>
                 <p>Emails ou mensagens falsas que imitam empresas reais para roubar os teus dados.</p>
             </div>
-             <div class="ameaca-card" data-modal-title="Passwords fracas" data-modal-text="Uma password fraca é uma das portas de entrada mais fáceis para um atacante. Evita datas de nascimento, nomes próprios ou sequências simples. Uma boa password tem pelo menos 12 caracteres, combina letras maiúsculas e minúsculas, números e símbolos. Considera usar um gestor de passwords.">
-                <h3> 🔑 Passwords fracas</h3>
+
+            <div class="ameaca-card"
+                data-modal-title="Passwords Fracas"
+                data-modal-text="Uma password fraca é uma das portas de entrada mais fáceis para um atacante. Evita datas de nascimento, nomes próprios ou sequências simples. Uma boa password tem pelo menos 12 caracteres, combina letras maiúsculas e minúsculas, números e símbolos. Considera usar um gestor de passwords como o Bitwarden.">
+                <h3>🔑 Passwords Fracas</h3>
                 <p>Usar '123456' ou o teu nome como password é um convite para os hackers.</p>
             </div>
-            <div class="ameaca-card" data-modal-title="Malware" data-modal-text="O malware inclui vírus, ransomware e spyware. Pode chegar através de ficheiros descarregados, anexos de email ou sites não seguros. Uma vez instalado, pode roubar dados, bloquear o teu computador ou espiar a tua atividade. Mantém o teu sistema operativo e antivírus sempre atualizados.">
-                <h3> 🛡️ Malware</h3>
+
+            <div class="ameaca-card"
+                data-modal-title="Malware"
+                data-modal-text="O malware inclui vírus, ransomware e spyware. Pode chegar através de ficheiros descarregados, anexos de email ou sites não seguros. Uma vez instalado, pode roubar dados, bloquear o teu computador ou espiar a tua atividade. Mantém o teu sistema operativo e antivírus sempre atualizados.">
+                <h3>🛡️ Malware</h3>
                 <p>Programas maliciosos que se instalam no teu dispositivo sem o teu conhecimento.</p>
             </div>
-            <div class="ameaca-card" data-modal-title="Wi-Fi público" data-modal-text="Numa rede Wi-Fi pública, como num café ou aeroporto, qualquer pessoa na mesma rede pode tentar intercetar o teu tráfego. Evita aceder ao teu banco ou introduzir passwords nestas redes. Se precisares mesmo de as usar, considera ligar uma VPN para proteger a tua ligação.">
-                <h3> 🌐 Wi-Fi público</h3>
+
+            <div class="ameaca-card"
+                data-modal-title="Wi-Fi Público"
+                data-modal-text="Numa rede Wi-Fi pública, como num café ou aeroporto, qualquer pessoa na mesma rede pode tentar intercetar o teu tráfego. Evita aceder ao teu banco ou introduzir passwords nestas redes. Se precisares mesmo de as usar, considera ligar uma VPN para proteger a tua ligação.">
+                <h3>🌐 Wi-Fi Público</h3>
                 <p>Ligar-te a redes abertas pode expor os teus dados a desconhecidos na mesma rede.</p>
-            </div>            
+            </div>
+
         </div>
     </section>
 
-    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <!-- MODAL -->
+    <div id="modal" class="modal">
         <div class="modal-content">
-            <button id="modal-close" class="modal-close" type="button" aria-label="Fechar modal">x</button>
+            <button id="modal-close" class="modal-close" type="button">✕</button>
             <h3 id="modal-title"></h3>
             <p id="modal-text"></p>
         </div>
     </div>
 
+    <!-- SECÇÃO: QUIZ -->
     <section class="quiz-section" id="quiz-section">
         <h2>Quiz</h2>
-        <p>Testa os teus conhecimentos sobre segurança digital!</p>
+        <p class="quiz-intro">Testa os teus conhecimentos sobre segurança digital!</p>
+
+        <div class="quiz-container">
+
+            <div class="quiz-pergunta" id="pergunta-1">
+                <p>1. Usas a mesma password em vários sites?</p>
+                <button class="btn-quiz" onclick="responder(1, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(1, 'nao')">Não</button>
+            </div>
+
+            <div class="quiz-pergunta" id="pergunta-2">
+                <p>2. Já clicaste num link de um email sem verificar o remetente?</p>
+                <button class="btn-quiz" onclick="responder(2, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(2, 'nao')">Não</button>
+            </div>
+
+            <div class="quiz-pergunta" id="pergunta-3">
+                <p>3. Tens o teu sistema operativo atualizado?</p>
+                <button class="btn-quiz" onclick="responder(3, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(3, 'nao')">Não</button>
+            </div>
+
+            <div class="quiz-pergunta" id="pergunta-4">
+                <p>4. Já usaste o teu banco numa rede Wi-Fi pública?</p>
+                <button class="btn-quiz" onclick="responder(4, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(4, 'nao')">Não</button>
+            </div>
+
+            <div class="quiz-pergunta" id="pergunta-5">
+                <p>5. Usas autenticação de dois fatores em pelo menos uma conta?</p>
+                <button class="btn-quiz" onclick="responder(5, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(5, 'nao')">Não</button>
+            </div>
+
+            <div class="quiz-pergunta" id="pergunta-6">
+                <p>6. As tuas passwords têm pelo menos 12 caracteres?</p>
+                <button class="btn-quiz" onclick="responder(6, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(6, 'nao')">Não</button>
+            </div>
+
+            <div class="quiz-pergunta" id="pergunta-7">
+                <p>7. Já descarregaste software de sites não oficiais?</p>
+                <button class="btn-quiz" onclick="responder(7, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(7, 'nao')">Não</button>
+            </div>
+
+            <div class="quiz-pergunta" id="pergunta-8">
+                <p>8. Tens antivírus instalado e atualizado no teu dispositivo?</p>
+                <button class="btn-quiz" onclick="responder(8, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(8, 'nao')">Não</button>
+            </div>
+
+            <div class="quiz-pergunta" id="pergunta-9">
+                <p>9. Já partilhaste a tua password com alguém, mesmo sendo de confiança?</p>
+                <button class="btn-quiz" onclick="responder(9, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(9, 'nao')">Não</button>
+            </div>
+
+            <div class="quiz-pergunta" id="pergunta-10">
+                <p>10. Verificas se um site é seguro (https) antes de introduzires dados pessoais?</p>
+                <button class="btn-quiz" onclick="responder(10, 'sim')">Sim</button>
+                <button class="btn-quiz" onclick="responder(10, 'nao')">Não</button>
+            </div>
+
+            <div id="quiz-resultado" class="quiz-resultado">
+                <p id="resultado-texto"></p>
+                <button class="btn-reiniciar" onclick="reiniciarQuiz()">Tentar novamente</button>
+            </div>
+
+        </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- SECÇÃO: DICAS -->
+    <section class="dicas-section" id="dicas-section">
+        <h2>Dicas de Segurança</h2>
+        <p class="dicas-intro">Escolhe uma categoria e descobre como te proteger melhor!</p>
+
+        <div class="dicas-container">
+
+            <div class="tabs">
+                <button class="tab ativa" onclick="mostrarTab('passwords', this)">🔐 Passwords</button>
+                <button class="tab" onclick="mostrarTab('navegacao', this)">🌐 Navegação</button>
+                <button class="tab" onclick="mostrarTab('dispositivos', this)">📱 Dispositivos</button>
+            </div>
+
+            <div id="passwords" class="tab-conteudo">
+                <ul class="dicas-lista">
+                    <li>🔑 Usa uma password diferente para cada conta importante</li>
+                    <li>📏 A tua password deve ter pelo menos 12 caracteres</li>
+                    <li>🔀 Mistura letras maiúsculas, minúsculas, números e símbolos</li>
+                    <li>🗄️ Usa um gestor de passwords como o Bitwarden — é gratuito e seguro</li>
+                    <li>🔄 Muda as tuas passwords regularmente, especialmente após uma suspeita</li>
+                </ul>
+            </div>
+
+            <div id="navegacao" class="tab-conteudo" style="display: none;">
+                <ul class="dicas-lista">
+                    <li>🔒 Verifica sempre se o site começa por https antes de introduzir dados</li>
+                    <li>📧 Nunca cliques em links de emails sem verificar o remetente</li>
+                    <li>📶 Evita fazer compras ou aceder ao banco em Wi-Fi público</li>
+                    <li>🍪 Limpa os cookies e o histórico do browser regularmente</li>
+                    <li>🛡️ Usa uma VPN se precisares de usar redes públicas frequentemente</li>
+                </ul>
+            </div>
+
+            <div id="dispositivos" class="tab-conteudo" style="display: none;">
+                <ul class="dicas-lista">
+                    <li>🔄 Mantém o sistema operativo e as aplicações sempre atualizados</li>
+                    <li>🦠 Instala um antivírus e mantém-no ativo</li>
+                    <li>🔐 Ativa o bloqueio automático do ecrã por inatividade</li>
+                    <li>💾 Faz backups regulares dos teus ficheiros importantes</li>
+                    <li>📲 Só instala aplicações de lojas oficiais como a App Store ou Google Play</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECÇÃO: CHECKLIST -->
+    <section class="checklist-section" id="checklist-section">
+        <h2>Checklist de Segurança</h2>
+        <p class="checklist-intro">Quantos destes bons hábitos já tens? Marca os que já praticas!</p>
+
+        <div class="checklist-container">
+
+            <div class="progresso-container">
+                <p id="progresso-texto">0 de 12 concluídos</p>
+                <div class="barra-fundo">
+                    <div class="barra-progresso" id="barra-progresso"></div>
+                </div>
+            </div>
+
+            <div class="acordeao-item">
+                <button class="acordeao-cabecalho" onclick="toggleAcordeao(this)">
+                    <span>🔐 Passwords</span>
+                    <span class="seta">▼</span>
+                </button>
+                <div class="acordeao-conteudo">
+                    <ul class="checklist">
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Uso passwords diferentes em cada conta</label>
+                        </li>
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> As minhas passwords têm mais de 12 caracteres</label>
+                        </li>
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Uso um gestor de passwords (ex: Bitwarden)</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="acordeao-item">
+                <button class="acordeao-cabecalho" onclick="toggleAcordeao(this)">
+                    <span>📱 Dispositivos</span>
+                    <span class="seta">▼</span>
+                </button>
+                <div class="acordeao-conteudo">
+                    <ul class="checklist">
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> O meu sistema operativo está atualizado</label>
+                        </li>
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Tenho antivírus instalado e ativo</label>
+                        </li>
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Bloqueio o meu dispositivo quando não o estou a usar</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="acordeao-item">
+                <button class="acordeao-cabecalho" onclick="toggleAcordeao(this)">
+                    <span>🌐 Navegação</span>
+                    <span class="seta">▼</span>
+                </button>
+                <div class="acordeao-conteudo">
+                    <ul class="checklist">
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Verifico sempre se o site tem https antes de introduzir dados</label>
+                        </li>
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Não uso redes Wi-Fi públicas para aceder ao banco ou email</label>
+                        </li>
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Não clico em links de emails sem verificar o remetente</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="acordeao-item">
+                <button class="acordeao-cabecalho" onclick="toggleAcordeao(this)">
+                    <span>🛡️ Contas Online</span>
+                    <span class="seta">▼</span>
+                </button>
+                <div class="acordeao-conteudo">
+                    <ul class="checklist">
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Tenho autenticação de dois fatores ativada nas contas principais</label>
+                        </li>
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Revejo regularmente as aplicações com acesso às minhas contas</label>
+                        </li>
+                        <li class="checklist-item">
+                            <label><input type="checkbox" onchange="atualizarChecklist()"> Termino sempre a sessão em dispositivos partilhados</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="checklist-mensagem" class="checklist-mensagem">
+                🎉 Parabéns! Tens todos os bons hábitos de segurança digital!
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECÇÃO: CONTACTO -->
+    <section class="contacto-section" id="contacto-section">
+        <h2>Recebe Dicas por Email</h2>
+        <p class="contacto-intro">Subscreve e recebe dicas de segurança digital diretamente na tua caixa de entrada!</p>
+
+        <div class="contacto-container">
+
+            <div id="formulario-contacto">
+                <div class="campo">
+                    <label for="contacto-nome">Nome completo:</label>
+                    <input type="text" id="contacto-nome" placeholder="Ex: Ana Silva">
+                </div>
+                <div class="campo">
+                    <label for="contacto-email">Email:</label>
+                    <input type="email" id="contacto-email" placeholder="Ex: ana@email.com">
+                </div>
+                <div class="campo">
+                    <label for="contacto-mensagem">Tens alguma dúvida ou sugestão? (opcional)</label>
+                    <textarea id="contacto-mensagem" rows="4" placeholder="Escreve aqui..."></textarea>
+                </div>
+                <div class="campo-checkbox">
+                    <input type="checkbox" id="contacto-termos">
+                    <label for="contacto-termos">Aceito receber emails com dicas de segurança digital</label>
+                </div>
+                <button class="btn-formulario" onclick="submeterContacto()">Subscrever</button>
+            </div>
+
+            <div id="resultado-contacto" style="display: none;">
+                <div class="sucesso-icone">✅</div>
+                <p id="sucesso-mensagem"></p>
+                <p class="sucesso-sub">Podes cancelar a subscrição a qualquer momento.</p>
+                <button class="btn-reiniciar" onclick="reiniciarContacto()">Voltar ao formulário</button>
+            </div>
+
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 CiberSeguro por Cláudia Alfieri. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
