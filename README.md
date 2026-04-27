@@ -57,7 +57,13 @@ The goal is to present real digital risks, best practices, and interactive conte
 
 ## 👩‍💻 Author
 
-Developed by Cláudia Alfieri as part of the CET TPSI course at ATEC.
+Developed by **Cláudia Alfieri** as part of the CET TPSI course at ATEC.
+
+---
+
+## 📝 Contributions 🤝
+
+Contributions are welcome through pull requests!
 
 ---
 
