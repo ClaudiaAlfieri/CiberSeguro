@@ -26,7 +26,6 @@ O objetivo é apresentar riscos digitais reais, boas práticas e conteúdo inter
 | ⚠️ Tipos de Ameaças | Cards clicáveis com as principais ameaças digitais — abre modal com mais detalhes |
 | 🧠 Quiz | Quiz interativo de 10 perguntas para testar conhecimentos de segurança digital |
 | 💡 Dicas de Segurança | Dicas organizadas por tabs: Passwords, Navegação e Dispositivos |
-| ✅ Checklist | Acordeão com 12 bons hábitos organizados por categoria, com barra de progresso |
 | 📬 Recebe Dicas por Email | Formulário de subscrição com validação e mensagem de confirmação |
 
 ---
@@ -52,8 +51,6 @@ O objetivo é apresentar riscos digitais reais, boas práticas e conteúdo inter
   - Modal com abertura e fecho dinâmico
   - Quiz interativo com `switch` e condições
   - Tabs com troca de conteúdo dinâmica
-  - Acordeão com animação de abertura e fecho
-  - Checklist com barra de progresso em tempo real
   - Formulário com validação e feedback ao utilizador
   - Eventos `onclick` e `onchange`
   - Criação de elementos dinâmicos com `textContent`
