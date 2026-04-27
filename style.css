@@ -50,12 +50,13 @@ nav a:hover {
 
 header, section {
     min-height: 100vh;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 60px;
 }
 
 header {
     padding-top: 60px;
     text-align: center;
+    background: #073263;
 }
 
 header img {
@@ -92,7 +93,13 @@ h2 {
 
 /* ==================== AMEAÇAS ==================== */
 
-.ameacas-section {
+section.ameacas-section {
+    background: #0a3d6b;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.ameacas-inner {
     width: min(1000px, 90%);
     margin: 0 auto;
 }
@@ -170,6 +177,7 @@ h2 {
 .quiz-section {
     width: min(700px, 90%);
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 .quiz-intro {
@@ -243,9 +251,22 @@ h2 {
 
 /* ==================== DICAS ==================== */
 
+section.dicas-section {
+    background: #0a3d6b;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    width:100%;
+}
+
+.dicas-inner {
+    width: min(700px, 90%);
+    margin: 0 auto;
+}
+
 .dicas-section {
     width: min(700px, 90%);
     margin: 0 auto;
+    background: #0a3d6b;
 }
 
 .dicas-intro {
@@ -314,147 +335,12 @@ h2 {
     background: #2d5a8e;
 }
 
-/* ==================== CHECKLIST ==================== */
-
-.checklist-section {
-    width: min(700px, 90%);
-    margin: 0 auto;
-}
-
-.checklist-intro {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #cbd5e1;
-    margin-bottom: 2rem;
-}
-
-.checklist-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.progresso-container {
-    background: #0f172a;
-    border-radius: 14px;
-    padding: 1.5rem 2rem;
-    border: 1px solid #1e3a5f;
-}
-
-#progresso-texto {
-    text-align: center;
-    margin: 0 0 0.7rem 0;
-    font-size: 1rem;
-    color: #cbd5e1;
-}
-
-.barra-fundo {
-    background: #1e3a5f;
-    border-radius: 10px;
-    height: 14px;
-    overflow: hidden;
-}
-
-.barra-progresso {
-    background: #4ade80;
-    height: 100%;
-    width: 0%;
-    border-radius: 10px;
-    transition: width 0.4s ease;
-}
-
-.acordeao-item {
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid #1e3a5f;
-}
-
-.acordeao-cabecalho {
-    width: 100%;
-    background: #0f172a;
-    color: #f4f7fb;
-    border: none;
-    padding: 1.2rem 1.5rem;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.2s ease;
-}
-
-.acordeao-cabecalho:hover {
-    background: #1e3a5f;
-}
-
-.seta {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.acordeao-conteudo {
-    max-height: 0;
-    overflow: hidden;
-    background: #ffffff;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    padding: 0 1.5rem;
-}
-
-.acordeao-conteudo.aberto {
-    max-height: 400px;
-    padding: 1rem 1.5rem;
-}
-
-.checklist {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.checklist-item {
-    padding: 0.6rem 0;
-    border-bottom: 1px solid #e2e8f0;
-    color: #0f172a;
-    transition: color 0.3s ease;
-    font-size: 1rem;
-}
-
-.checklist-item:last-child {
-    border-bottom: none;
-}
-
-.checklist-item label {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    cursor: pointer;
-}
-
-.checklist-item input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    accent-color: #4ade80;
-    flex-shrink: 0;
-}
-
-.checklist-mensagem {
-    display: none;
-    text-align: center;
-    padding: 1rem;
-    background: #14532d;
-    color: #4ade80;
-    border-radius: 14px;
-    font-size: 1.1rem;
-    border: 1px solid #4ade80;
-}
-
 /* ==================== CONTACTO ==================== */
 
 .contacto-section {
     width: min(700px, 90%);
     margin: 0 auto;
+    padding-top: 1px;
 }
 
 .contacto-intro {
@@ -507,23 +393,6 @@ h2 {
     min-height: 100px;
 }
 
-.campo-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 1.5rem;
-    color: #cbd5e1;
-    font-size: 0.95rem;
-}
-
-.campo-checkbox input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    accent-color: #4ade80;
-    flex-shrink: 0;
-}
-
 .btn-formulario {
     width: 100%;
     padding: 1rem;
@@ -552,13 +421,6 @@ h2 {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
-}
-
-.sucesso-sub {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #cbd5e1;
-    margin-bottom: 1.5rem;
 }
 
 /* ==================== FOOTER ==================== */
@@ -647,11 +509,6 @@ footer {
     }
 
     .tab-conteudo {
-        padding: 1rem;
-    }
-
-    .acordeao-cabecalho {
-        font-size: 1rem;
         padding: 1rem;
     }
 
