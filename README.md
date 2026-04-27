@@ -4,58 +4,66 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![ATEC](https://img.shields.io/badge/Training-TPSI%20%7C%20ATEC-darkgreen?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In%20progress-yellow?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Concluído-brightgreen?style=for-the-badge)
 
-> CiberSeguro — a cybersecurity awareness website built with HTML, CSS & JavaScript for the CET TPSI programme at ATEC.
-
----
-
-## 📌 About This Project
-
-**CiberSeguro** is a front-end website about cybersecurity in everyday life, developed as part of the **CET TPSI** programme at **ATEC — Academia de Formação**.
-
-The goal is to present real-world digital risks, best practices and interactive content in a clear and accessible way — demonstrating autonomy, organization and creativity in applying web development concepts. 🎯
+> CiberSeguro — um site de sensibilização para a cibersegurança, desenvolvido com HTML, CSS e JavaScript no âmbito do curso CET TPSI na ATEC.
 
 ---
 
-## 🌐 Pages & Sections
+## 📌 Sobre o Projeto
 
-| Section | Description |
+**CiberSeguro** é um site front-end sobre segurança digital no dia a dia, desenvolvido como trabalho prático do curso **CET TPSI** na **ATEC — Academia de Formação**.
+
+O objetivo é apresentar riscos digitais reais, boas práticas e conteúdo interativo de forma clara e acessível — demonstrando autonomia, organização e criatividade na aplicação de conceitos de desenvolvimento web. 🎯
+
+---
+
+## 🌐 Secções do Site
+
+| Secção | Descrição |
 |---|---|
-| 🏠 Home | Hero section with site introduction |
-| ⚠️ Tipos de Ameaças | Cards with the main cybersecurity threats |
-| 🧠 Quiz | Interactive quiz to test digital security knowledge |
-| ✅ Checklist | *(coming soon)* |
-| 📬 Contacto | *(coming soon)* |
+| 🏠 Home | Hero com introdução ao site e nome da autora |
+| ⚠️ Tipos de Ameaças | Cards clicáveis com as principais ameaças digitais — abre modal com mais detalhes |
+| 🧠 Quiz | Quiz interativo de 10 perguntas para testar conhecimentos de segurança digital |
+| 💡 Dicas de Segurança | Dicas organizadas por tabs: Passwords, Navegação e Dispositivos |
+| ✅ Checklist | Acordeão com 12 bons hábitos organizados por categoria, com barra de progresso |
+| 📬 Recebe Dicas por Email | Formulário de subscrição com validação e mensagem de confirmação |
 
 ---
 
-## ⚠️ Threats Covered
+## ⚠️ Ameaças Abordadas
 
-- 📧 **Phishing** — fake emails and messages that steal your data
-- 🔑 **Weak Passwords** — why "123456" is an open door for hackers
-- 🛡️ **Malware** — viruses, ransomware and spyware
-- 🌐 **Public Wi-Fi** — the risks of open networks
-
----
-
-## 🛠️ Technologies & Concepts Applied
-
-- **HTML5** — semantic structure and content organization
-- **CSS3** — visual presentation, Flexbox / Grid layout, hover effects, transitions and animations, media queries for responsiveness
-- **JavaScript** — DOM manipulation, modal windows, interactive quiz, dynamic elements, `onclick` events, conditions and `switch`
+- 📧 **Phishing** — emails e mensagens falsas que roubam os teus dados
+- 🔑 **Passwords Fracas** — porque o "123456" é uma porta aberta para hackers
+- 🛡️ **Malware** — vírus, ransomware e spyware
+- 🌐 **Wi-Fi Público** — os riscos das redes abertas
 
 ---
 
-## 👩‍💻 Author
+## 🛠️ Tecnologias e Conceitos Aplicados
 
-This project was developed by **Cláudia Alfieri** as part of a web development learning journey.
-
-## 📝 Contributions 🤝
-
-Contributions are welcome through pull requests!
+- **HTML5** — estrutura semântica e organização do conteúdo
+- **CSS3**
+  - Flexbox e Grid layout
+  - Efeitos hover, transitions e animações CSS
+  - Media queries para responsividade (desktop, tablet e telemóvel)
+- **JavaScript**
+  - Manipulação do DOM
+  - Modal com abertura e fecho dinâmico
+  - Quiz interativo com `switch` e condições
+  - Tabs com troca de conteúdo dinâmica
+  - Acordeão com animação de abertura e fecho
+  - Checklist com barra de progresso em tempo real
+  - Formulário com validação e feedback ao utilizador
+  - Eventos `onclick` e `onchange`
+  - Criação de elementos dinâmicos com `textContent`
 
 ---
 
-Made with ❤️, code and a whole lot of persistence 🚀
+## 👩‍💻 Autora
 
+Desenvolvido por **Cláudia Alfieri** no âmbito do curso CET TPSI na ATEC.
+
+---
+
+Feito com ❤️, código e muita persistência 🚀
