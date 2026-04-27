@@ -125,69 +125,14 @@ function mostrarTab(categoria, botao) {
     botao.classList.add("ativa");
 }
 
-// ==================== CHECKLIST ====================
-
-function toggleAcordeao(botao) {
-    const conteudo = botao.nextElementSibling;
-    const seta = botao.querySelector(".seta");
-    const estaAberto = conteudo.classList.contains("aberto");
-
-    document.querySelectorAll(".acordeao-conteudo").forEach(function(item) {
-        item.classList.remove("aberto");
-    });
-    document.querySelectorAll(".seta").forEach(function(s) {
-        s.style.transform = "rotate(0deg)";
-    });
-
-    if (!estaAberto) {
-        conteudo.classList.add("aberto");
-        seta.style.transform = "rotate(180deg)";
-    }
-}
-
-function atualizarChecklist() {
-    const checkboxes = document.querySelectorAll(".checklist-item input[type='checkbox']");
-    const total = checkboxes.length;
-    let marcados = 0;
-
-    checkboxes.forEach(function(checkbox) {
-        const item = checkbox.closest(".checklist-item");
-
-        if (checkbox.checked) {
-            marcados++;
-            item.style.textDecoration = "line-through";
-            item.style.color = "#4ade80";
-        } else {
-            item.style.textDecoration = "none";
-            item.style.color = "#0f172a";
-        }
-    });
-
-    document.getElementById("progresso-texto").textContent = marcados + " de " + total + " concluídos";
-    document.getElementById("barra-progresso").style.width = (marcados / total * 100) + "%";
-
-    const mensagem = document.getElementById("checklist-mensagem");
-    if (marcados === total) {
-        mensagem.style.display = "block";
-    } else {
-        mensagem.style.display = "none";
-    }
-}
-
 // ==================== FORMULÁRIO DE CONTACTO ====================
 
 function submeterContacto() {
     const nome = document.getElementById("contacto-nome").value;
     const email = document.getElementById("contacto-email").value;
-    const termos = document.getElementById("contacto-termos").checked;
 
     if (nome === "" || email === "") {
         alert("Por favor preenche o nome e o email!");
-        return;
-    }
-
-    if (!termos) {
-        alert("Tens de aceitar receber os emails para continuar!");
         return;
     }
 
@@ -202,7 +147,6 @@ function reiniciarContacto() {
     document.getElementById("contacto-nome").value = "";
     document.getElementById("contacto-email").value = "";
     document.getElementById("contacto-mensagem").value = "";
-    document.getElementById("contacto-termos").checked = false;
 
     document.getElementById("resultado-contacto").style.display = "none";
     document.getElementById("formulario-contacto").style.display = "block";
