@@ -110,7 +110,7 @@ function reiniciarQuiz() {
     document.getElementById("pergunta-1").style.display = "block";
 }
 
-// ==================== DICAS (TABS) ====================
+// ==================== DICAS ====================
 
 function mostrarTab(categoria, botao) {
     document.querySelectorAll(".tab-conteudo").forEach(function(conteudo) {
@@ -125,7 +125,7 @@ function mostrarTab(categoria, botao) {
     botao.classList.add("ativa");
 }
 
-// ==================== CHECKLIST (ACORDEÃO) ====================
+// ==================== CHECKLIST ====================
 
 function toggleAcordeao(botao) {
     const conteudo = botao.nextElementSibling;
